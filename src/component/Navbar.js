@@ -29,7 +29,7 @@ function Navbar() {
           <a href="https://wa.me/27722014044" target="_blank" rel="noopener noreferrer" className="icon-link">
             <FaWhatsapp size={24} color="#25D366" />
           </a>
-          <a href="tel:+27712345678" className="icon-link">
+          <a href="tel:+27722014044" className="icon-link">
             <FaPhone size={24} color="#007BFF" />
           </a>
         </div>
