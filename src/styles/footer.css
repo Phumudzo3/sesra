@@ -1,57 +1,95 @@
+/* Base Footer Styles */
 .footer {
   background-color: #333;
-  color: white;
-  padding: 20px 0;
-  font-size: 14px;
+  color: #fff;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;              /* space between sections on mobile */
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1rem;
 }
 
-.footer-info, .footer-social, .footer-contact {
-  flex: 1;
-  margin: 0 10px;
-}
-
-.footer-info {
-  text-align: left;
-}
-
-.footer-social {
-  text-align: center;
-}
-
+/* All three sections center‑aligned by default */
+.footer-info,
+.footer-social,
 .footer-contact {
-  text-align: right;
+  text-align: center;
+  width: 100%;
 }
 
-.footer-address {
-  margin-top: 5px;
+/* Company Info */
+.footer-info .footer-text {
+  margin-bottom: 0.5rem;
+}
+.footer-info .footer-address {
+  font-size: 0.875rem;
 }
 
-.social-icon {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+/* Social Icons + Logo */
+.footer-social .social-icon {
+  margin: 0 0.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  transition: color 0.2s;
+}
+.footer-social .social-icon:hover {
+  color: #1e90ff;
+}
+.footer-social .footer-logo {
+  margin-top: 1rem;
+}
+.footer-social .footer-logo img {
+  height: 40px;
+  object-fit: contain;
 }
 
-.social-icon:hover {
-  color: #1E90FF;
-}
-
+/* Contact Details */
 .footer-contact p {
-  margin: 5px 0;
+  margin: 0.5rem 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.footer-contact p svg {
+  margin-right: 0.5rem;
+  color: #facc15;
 }
 
-.footer-contact p svg {
-  margin-right: 8px;
+/* --- Larger screens: Three‑column layout --- */
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;               /* reset gap since we’re spacing via justify-content */
+  }
+
+  .footer-info,
+  .footer-social,
+  .footer-contact {
+    width: auto;
+  }
+
+  .footer-info {
+    text-align: left;
+  }
+
+  .footer-social {
+    text-align: center;
+  }
+
+  .footer-contact {
+    text-align: right;
+  }
+
+  .footer-social .footer-logo img {
+    height: 50px;
+  }
 }

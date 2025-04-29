@@ -1,0 +1,96 @@
+/* Base styles for Contact section */
+.contact-section {
+  padding: 2rem 1rem;            /* ample padding but not too wide on mobile */
+  background-color: #f9fafb;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Heading and subtitle */
+.contact-section h2 {
+  font-size: 1.75rem;            /* slightly smaller on mobile */
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+/* Form container */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;                     /* consistent vertical spacing */
+  max-width: 100%;               /* full width on small screens */
+  width: 100%;
+  margin: 0 auto;                /* center horizontally */
+}
+
+/* Inputs & textarea */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  color: #1f2937;
+  background: white;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Submit button */
+.contact-form button {
+  background-color: #facc15;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  width: 100%;                   /* full width on mobile */
+  max-width: 240px;              /* cap width on larger screens */
+  align-self: center;            /* center within the flex container */
+}
+
+.contact-form button:hover {
+  background-color: #eab308;
+  transform: translateY(-1px);
+}
+
+/* --- Responsive adjustments for larger screens --- */
+@media (min-width: 640px) {
+  .contact-section {
+    padding: 3rem 2rem;
+  }
+
+  .contact-section h2 {
+    font-size: 2rem;
+  }
+
+  .contact-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact-form {
+    max-width: 500px;
+  }
+
+  .contact-form button {
+    width: auto;                 /* auto‑width on tablets/desktops */
+  }
+}
