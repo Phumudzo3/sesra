@@ -39,7 +39,7 @@ function Footer() {
         {/* Right Section: Contact Details */}
         <div className="footer-contact">
           <p><FaPhone /> +2772 201 4044</p>
-          <p><FaEnvelope /> info@sesra.co.za</p>
+          <p><FaEnvelope /> sesraholdings@gmail.com</p>
           <p><FaMapMarkerAlt /> Stand No 69, Ga Mothapo, Polokwane 0734, South Africa</p>
         </div>
       </div>
